@@ -1,23 +1,38 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 int main(){
-    // SHOPPING CART PROGRAM
-    char item[30] = "";
-    float price = 0.0f;
-    int quantity = 0;
-    char currency = '$';
-    float total = 0.0f;
+    char noun[50] = "";
+    char verb[50] = "";
+    char adjective1[50] = "";
+    char adjective2[50] = "";
+    char adjective3[50] = "";
+    printf("Enter an adjective (description): \n");
+    fgets(adjective1, sizeof(adjective1), stdin);
+    adjective1[strlen(adjective1) - 1] = '\0';
 
-    printf("What item would you like to buy?\n");
-    fgets(item, sizeof(item), stdin);
-    printf("What is the price for each?\n");
-    scanf(" %f", &price);
-    printf("How many would you like?\n");
-    scanf("%d", &quantity);
-    total = price * quantity;
-    printf("\nYou have bought %d %s", quantity, item);
-    printf("The total is: %c%.2f", currency, total);
+    printf("Enter an noun (animal or person): \n");
+    fgets(noun, sizeof(noun), stdin);
+    noun[strlen(noun) - 1] = '\0';
 
+    printf("Enter an adjective (description): \n");
+    fgets(adjective2, sizeof(adjective2), stdin);
+    adjective2[strlen(adjective2) - 1] = '\0';
+
+    printf("Enter an verb (ending w/ -ing): \n");
+    fgets(verb, sizeof(verb), stdin);
+    verb[strlen(verb) - 1] = '\0';
+
+    printf("Enter an adjective (description): \n");
+    fgets(adjective3, sizeof(adjective3), stdin);
+    adjective3[strlen(adjective3) - 1] = '\0';
+
+    printf("Albert Einstein was %s at the time \n", adjective1);
+    printf("He met Paul Dirac who was quite %s in a park\n", adjective2);
+    printf("Both were talking enthusiastically about how %s Niels Bohr is\n", adjective3);
+    printf("When suddenly a %s barge in\n", noun);
+    printf("Einstein and Dirac were flabbergasted so they immediately go for a %s with their boots", verb);
+    
     return 0;
 
 }
