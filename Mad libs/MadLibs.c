@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <string.h>
 int main(){
+    // MAD LIBS
     char noun[50] = "";
     char verb[50] = "";
     char adjective1[50] = "";
